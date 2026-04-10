@@ -2,13 +2,13 @@
   "short_name": "PWA Chat",
   "name": "Chat para heroes",
   "start_url": "./index.html",
-  "background_color": "#fffff",
+  "background_color": "#ffffff",
   "lang": "es-CO",
   "display": "standalone",
   "description": "PWA chat de superheroes",
   "theme_color": "#1F3864",
-  "scope":"./",
-  "orientation": "portrait",
+  "scope": "./",
+  "orientation": "any",
   "icons": [
     {
       "src": "img/icons/icon-72x72.png",
@@ -66,5 +66,14 @@
       "form_factor": "wide",
       "label": "Vista escritorio de Chat para héroes"
     }
-  ]
+  ],
+  "share_target": {
+    "action": "/index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
