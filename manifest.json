@@ -1,8 +1,8 @@
 {
-  "short-name": "PWA Chat",
+  "short_name": "PWA Chat",
   "name": "Chat para heroes",
   "start_url": "./index.html",
-  "Background_color": "#fffff",
+  "background_color": "#fffff",
   "lang": "es-CO",
   "display": "standalone",
   "description": "PWA chat de superheroes",
