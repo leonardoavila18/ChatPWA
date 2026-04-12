@@ -75,5 +75,21 @@
       "text": "text",
       "url": "url"
     }
-  }
+  },
+  "shortcuts": [
+    {
+      "name": "Entrar como Spiderman",
+      "short_name": "Spiderman",
+      "description": "Inicia el chat directamente como Spiderman",
+      "url": "index.html?user=spiderman",
+      "icons": [{ "src": "img/avatars/spiderman.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Entrar como Ironman",
+      "short_name": "Ironman",
+      "description": "Inicia el chat directamente como Ironman",
+      "url": "index.html?user=ironman",
+      "icons": [{ "src": "img/avatars/ironman.jpg", "sizes": "192x192" }]
+    }
+  ]
 }
