@@ -91,5 +91,6 @@
       "url": "index.html?user=ironman",
       "icons": [{ "src": "img/avatars/ironman.jpg", "sizes": "192x192" }]
     }
-  ]
+  ],
+  "launch_handler": { "client_mode": "focus-existing" } 
 }
