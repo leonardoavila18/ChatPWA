@@ -21,7 +21,20 @@ var txtMensaje = $('#txtMensaje');
 // El usuario, contiene el ID del héroe seleccionado
 var usuario;
 
+window.addEventListener('load', () => {
+    const params = new URLSearchParams(window.location.search);
+    const usuario = params.get('user');
 
+    if (usuario) {
+        console.log("Acceso directo detectado para:", usuario);
+        
+        const avatarHeroe = document.querySelector(`img[data-user="${usuario}"]`);
+        
+        if (avatarHeroe) {
+            avatarHeroe.click(); // Esto dispara la lógica que ya tienes en tu app
+        }
+    }
+});
 
 
 // ===== Codigo de la aplicación
