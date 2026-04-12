@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head class="header">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -24,12 +24,15 @@
     <!-- IOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Chat para héroes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 
-    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76"   href="img/icons/icon-76x76.png">
 
     <!-- iPhone X (1125px x 2436px) -->
     <link rel="apple-touch-startup-image"
@@ -47,10 +50,6 @@
     <link rel="apple-touch-startup-image"
         media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
         href="img/icons-ios/apple-launch-640x1136.png">
-
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <meta name="apple-mobile-web-app-title" content="Twittor!">
 
 </head>
 
@@ -100,8 +99,8 @@
 
 
     <!-- Seleccion de personaje -->
-    <div id="seleccion" class="seleccion animated fadeIn fast" align="center">
-
+    <main id="seleccion" class="personajes" align="center">
+        
         <div>
             <img data-user="spiderman" src="img/avatars/spiderman.jpg" alt="spiderman" class="seleccion-avatar">
         </div>
@@ -122,7 +121,8 @@
             <img data-user="hulk" src="img/avatars/hulk.jpg" alt="hulk" class="seleccion-avatar">
         </div>
 
-    </div>
+    </main>
+
 
     <!-- FIN Seleccion de personaje -->
 

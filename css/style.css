@@ -18,14 +18,41 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
 }
-
 /* Personalizados */
 .oculto {
   display: none !important;
 }
 
+body {
+    margin: 0;
+    padding-top: env(safe-area-inset-top); /* Asegura un margen apropiado */
+    background-color: #f0f0f0; /* Ajusta según tu diseño */
+}
+
+.header {
+    background: #1F3864; /* Color de la barra superior */
+    padding: 16px 16px; /* Espaciado interno */
+    position: relative; /* Para manejar el z-index si es necesario */
+    color: white;
+}
+
+.titulo {
+    text-align: center; /* Centra el título */
+    font-size: 24px; /* Tamaño de letra, ajústalo según sea necesario */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+.personajes {
+    display: flex; /* Opción para usar flexbox */
+    flex-direction: column; /* Coloca los personajes en columna */
+    align-items: center; /* Centra los elementos */
+    margin-top: 5em; /* Espacio adicional entre la barra y los personajes */
+}
+
+
 .seleccion {
-  margin-top: 6em;
+  margin-top: 0;
+  padding-top: calc(10rem + env(safe-area-inset-top));
   display: block;
   margin-bottom: 6em;
 }
@@ -254,14 +281,14 @@ textarea {
     position: fixed;
     z-index: 999;
     top: 0px;
+    left: 0px;
 
     margin: auto;
     background-color: #3498db;
     text-shadow: #2084c7 1px 1px 0;
-    padding: 1em 0 !important;
+    padding: calc(1em + env(safe-area-inset-top)) 0 1em 0 !important;
     color: white;
     text-align: center;
-    /* margin-top: 1em; */
     font-family: "Lato";
     font-size: 1.6em;
 }
