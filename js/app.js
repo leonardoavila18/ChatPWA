@@ -127,15 +127,34 @@ cancelarBtn.on('click', function () {
     });
 });
 
+function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, function(tag) {
+        var charsToReplace = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        };
+        return charsToReplace[tag] || tag;
+    });
+}
+
 // Boton de enviar mensaje
 postBtn.on('click', function () {
 
-    var mensaje = txtMensaje.val();
-    if (mensaje.length === 0) {
+    var mensaje = txtMensaje.val().trim();
+    
+    // Validar longitud del mensaje
+    if (mensaje.length === 0 || mensaje.length > 500) {
+        alert("El mensaje no puede estar vacío ni exceder los 500 caracteres.");
         cancelarBtn.click();
         return;
     }
 
-    crearMensajeHTML(mensaje, usuario);
+    // Sanear el mensaje para prevenir XSS
+    var mensajeSaneado = escapeHTML(mensaje);
+
+    crearMensajeHTML(mensajeSaneado, usuario);
 
 });
